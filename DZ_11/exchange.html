@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exchange</title>
+</head>
+<body>
+<script>
+
+var currency1 = prompt('Какую валюту хотите поменять? (USD/UAH/EUR)');
+
+if ((currency1 == 'USD') || (currency1 == 'UAH') || (currency1 == 'EUR')) {
+	var currency2 = prompt('Какую валюту хотите получить? (USD/UAH/EUR)');
+}
+else {
+alert('Проверьте правильность введенных данных');
+}
+if ((currency2 == 'USD') || (currency2 == 'UAH') || (currency2 == 'EUR')) {
+	var sum = prompt('Введите сумму для обмена');
+}
+else {
+alert('Проверьте правильность введенных данных');
+}
+if ((currency1 == 'USD') && (currency2 == 'USD')) {
+alert(sum*1);
+}
+else if ((currency1 == 'USD') && (currency2 == 'UAH')) {
+alert(sum*24);
+}
+else if ((currency1 == 'USD') && (currency2 == 'EUR')) {
+alert(sum*0.9);
+}
+
+else if ((currency1 == 'UAH') && (currency2 == 'USD')) {
+alert(sum/24);
+}
+else if ((currency1 == 'UAH') && (currency2 == 'UAH')) {
+alert(sum*1);
+}
+else if ((currency1 == 'UAH') && (currency2 == 'EUR')) {
+alert(sum/27);
+}
+
+else if ((currency1 == 'EUR') && (currency2 == 'USD')) {
+alert(sum*1.1);
+}
+else if ((currency1 == 'EUR') && (currency2 == 'UAH')) {
+alert(sum*27);
+}
+else if ((currency1 == 'EUR') && (currency2 == 'EUR')) {
+alert(sum/1);
+}
+else {
+alert('Проверьте правильность введенных данных');
+}
+
+</script>
+</body>
+</html>
